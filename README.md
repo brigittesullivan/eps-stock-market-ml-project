@@ -1,6 +1,125 @@
 # eps-stock-market-ml-project
 Machine learning project that predicts the percent change in stock price after next earnings event for public companies
 
+## Project Goal
+
+* Predict percent change in stock price after next earnings event for all companies using the date and stock price as inputs
+* There will be one record per earning event date per company
+
+## Scope
+**Scope:**
+
+
+<table>
+  <tr>
+   <td><strong>In Scope</strong>
+   </td>
+   <td><strong>Out of Scope</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Minimum Viable Product (MVP):
+<ul>
+
+<li>Only stocks listed in “all_tickers-with-options.csv” list
+
+<li>ML model that predicts percent change of any stock after earnings release
+
+<li>Using publicly available data for previous 4 Earnings releases for each company from 2023
+
+<li>One cycle of optimization / tuning
+
+<li>Measure and interpretation ML model’s effectiveness at predicting target variable (accuracy) using one metric
+
+<p>
+Time permitting:
+<ul>
+
+<li>Additional rounds of optimization to increase accuracy
+
+<li>Measure and interpretation ML model’s effectiveness at predicting target variable (accuracy) using multiple metrics
+
+<li>Ability to input custom dates/stock to generate ad hoc predictions
+</li>
+</ul>
+</li>
+</ul>
+   </td>
+   <td>
+<ul>
+
+<li>Custom ML Model for each stock  
+
+<li>ML model that considers a companies full / continuous stock history to develop predictions for next earnings release
+
+<li>Deployment for re-use, interactivity
+
+<li>model satisfying pre-determined accuracy performance targets
+
+<li>Straddle return data provided in “EarningsStraddles_RecentEarnings_Results.csv”
+
+<li>Unit testing
+
+<li>Time drift evaluation
+</li>
+</ul>
+   </td>
+  </tr>
+</table>
+
+
+**Process:**
+
+
+<table>
+  <tr>
+   <td><strong>Inputs</strong>
+   </td>
+   <td><strong>Processing</strong>
+   </td>
+   <td><strong>Output</strong>
+   </td>
+  </tr>
+  <tr>
+   <td>Date of previous 4 EPS releases for each stock
+<p>
+Target date (same day as EPS or next market open day)
+<p>
+Stock price 1 market day prior to EPS release date (high, open, low, close) 
+<p>
+Stock price after to EPS release date
+<p>
+(high, open, low, close) 
+   </td>
+   <td>Cleaning all source data
+<ul>
+
+<li>Remove outliers
+
+<p>
+Transforming 
+<p>
+ML Model (Exact model TBD)
+<p>
+Tuning
+</li>
+</ul>
+   </td>
+   <td>Predicted % change in stock price based on stock price and earnings release date
+   </td>
+  </tr>
+</table>
+
+
+**Assumptions:**
+
+
+
+* Project as outlined in this document will be completed by a single learner 
+* Project scope and expectations will be reasonable for a single learner to complete within the allotted time, including skipping milestones outlined in Riipen.
+* Project will not follow the exact milestones in Riipen, and there is no requirement to do so
+* Available data sets will be used regardless of whether they possess the characteristics required for developing a strong(accurate) machine learning model. Best efforts will be made to optimize within the constraints outlined in this document
+
 
 ## Approach: 
 1. Aquire data:
@@ -21,4 +140,5 @@ Machine learning project that predicts the percent change in stock price after n
    
 ## Findings: 
 
-In the end, all models performed relatively the same. 
+All models performed relatively the same. 
+
