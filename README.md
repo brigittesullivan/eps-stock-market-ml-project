@@ -7,8 +7,6 @@ Machine learning project that predicts the percent change in stock price after n
 * There will be one record per earning event date per company
 
 ## Scope
-**Scope:**
-
 
 <table>
   <tr>
@@ -68,8 +66,7 @@ Time permitting:
 </table>
 
 
-**Process:**
-
+## Process:
 
 <table>
   <tr>
@@ -91,17 +88,17 @@ Stock price after to EPS release date
 <p>
 (high, open, low, close) 
    </td>
-   <td>Cleaning all source data
-<ul>
-
-<li>Remove outliers
-
+   <td> 
+   <p>
+   Cleaning all source data
+   <p>
+   Remove outliers
+   <p>
+   Transforming 
 <p>
-Transforming 
+ML Model (Regression Tree)
 <p>
-ML Model (Exact model TBD)
-<p>
-Tuning
+Tuning (GridSearchCV)
 </li>
 </ul>
    </td>
@@ -111,14 +108,12 @@ Tuning
 </table>
 
 
-**Assumptions:**
+## Assumptions:
 
-
-
-* Project as outlined in this document will be completed by a single learner 
+* Work outlined in this document will be completed by a single learner 
 * Project scope and expectations will be reasonable for a single learner to complete within the allotted time, including skipping milestones outlined in Riipen.
-* Project will not follow the exact milestones in Riipen, and there is no requirement to do so
-* Available data sets will be used regardless of whether they possess the characteristics required for developing a strong(accurate) machine learning model. Best efforts will be made to optimize within the constraints outlined in this document
+* Project may not follow the exact milestones in Riipen, and there is no requirement to do so
+* Available data sets will be used regardless of whether they possess the characteristics required for developing a strong (accurate) machine learning model. Best efforts will be made to optimize within the constraints outlined in this document
 
 
 ## Approach: 
@@ -135,10 +130,13 @@ Tuning
    a. Baseline Statistical Model - understand summary stats of the data
    b. Baseline Linear Regression Model - generate mean absolute error for test and evaluation data sets and interpret results
    c.  Regression Tree Model - generate mean absolute error for test and evaluation data sets and interpret results. Regression tree model chosen since it is known to be able to handle non-linear data well.
-   d. Optimize Regression Tree Model - use mean absolute error to 
+   d. Optimize Regression Tree Model - use mean absolute error to evaluate improvement
    
    
 ## Findings: 
 
 All models performed relatively the same. 
 
+### Mean Absolute Error for each model:
+
+{{ TABLE }}
