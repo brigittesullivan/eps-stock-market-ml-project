@@ -152,7 +152,7 @@ Mean Absolute Error (MAE): average distance between the actual value and the pre
 
 The models are not overfit as the evaluation MAE is greater than the training MAE.
 
-All models performed relatively the same. where the predicted percent change is off by ~5% (e.g., if the actual value is +10% model might predict a +15% change.)
+All models performed relatively the same. where the predicted percent change is off by ~5% (e.g.,  if the actual value is +10% model might predict a +15% change.)
 
 ### Mean Absolute Error for each model:
 
