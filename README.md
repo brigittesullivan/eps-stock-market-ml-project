@@ -1,5 +1,7 @@
-# eps-stock-market-ml-project
-Machine learning project that predicts the percent change in stock price after next earnings event for public companies
+# ICT Ignite - Data Science STOCK Earnings Project  </br>
+Developped by: Brigitte Sullivan</br>
+Manager: VYOP Software </br>
+Submitted on: March 15, 2024 </br>
 
 ## Project Goal
 
@@ -117,26 +119,54 @@ Tuning (GridSearchCV)
 
 
 ## Approach: 
-1. Aquire data:
-   a. Companys of Interest - provided ('all_tickers-with-options.csv')
-   b. Earnings Events dates - provided ('confirmed_earnings.csv') 
-   c. Earnings Per Share - sourced using yfinance API based on earnings events dated in "b"
-   d. Stock Price History - sourced using XXXX API based on companies in "a"
+1. Aquire data: </br>
+   a. Companys of Interest - provided ('all_tickers-with-options.csv') </br>
+   b. Earnings Events dates - provided ('confirmed_earnings.csv')  </br>
+   c. Earnings Per Share - sourced using yfinance API based on earnings events dated in "b" </br>
+   d. Stock Price History - sourced using XXXX API based on companies in "a" </br>
 2. Merge and join all aquired data into one data set
 3. Perform EDA to understand high-level the nature of the data
 4. Cleaning - remove missing values, remove outliers, remove records with no associated EPS data. 
-5. Modelling:
-   * Used mean absolute error to compare model strength accross each model iteration. 
-   a. Baseline Statistical Model - understand summary stats of the data
-   b. Baseline Linear Regression Model - generate mean absolute error for test and evaluation data sets and interpret results
-   c.  Regression Tree Model - generate mean absolute error for test and evaluation data sets and interpret results. Regression tree model chosen since it is known to be able to handle non-linear data well.
-   d. Optimize Regression Tree Model - use mean absolute error to evaluate improvement
+5. Modelling: </br>
+   Used mean absolute error to compare model strength accross each model iteration.  </br>
+   a. Baseline Statistical Model - understand summary stats of the data </br>
+   b. Baseline Linear Regression Model - generate mean absolute error for test and evaluation data sets and interpret results </br>
+   c.  Regression Tree Model - generate mean absolute error for test and evaluation data sets and interpret results. Regression tree model chosen since it is known to be able to handle non-linear data well. </br>
+   d. Optimize Regression Tree Model - use mean absolute error to evaluate improvement </br>
+   Notebook Link: 
    
    
 ## Findings: 
 
-All models performed relatively the same. 
+Mean Absolute Error (MAE): average distance between the actual value and the predicted value for percent change. 
+
+The models are not overfit as the evaluation MAE is greater than the training MAE.
+
+All models performed relatively the same. where the predicted percent change is off by ~5% (e.g., actual value is +10% model might predict a +15% change.)
 
 ### Mean Absolute Error for each model:
 
-{{ TABLE }}
+|           |Train                  |Eval               |
+|-----------|-------------|-------------------|
+|Decision Tree             |0.04534    |0.04847|
+|Linear Regression         |0.04570    |0.04833|
+|Decision Tree (tuned)     |0.04543    |0.04833|
+
+
+# Next steps:
+Thoughts for future and the next iteration of this model :
+
+* look at other stock market features and find stronger linear relationships to use for predictions.For instance,  Would there be an improvement to the performance of the model if incorporated:
+   * premarket or postmarket announcement (as 1 for premarket, 0 for postmarket)?
+   * month announced
+   * day of week announced
+   * straddle returns options datainto dataset
+* Select highest priority stocks to evaluate and develop one one model per stock, 
+* integrating time series forecasting
+
+
+
+
+
+
+
